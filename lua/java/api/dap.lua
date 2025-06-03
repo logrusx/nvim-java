@@ -24,6 +24,7 @@ function M.config_dap()
 
 	return async(function()
 			local config = vim.g.nvim_java_config
+		if config.java_debug_adapter.enable then
 			if config.notifications.dap then
 				notify.warn('Configuring DAP')
 			end
@@ -31,6 +32,7 @@ function M.config_dap()
 			if config.notifications.dap then
 				notify.info('DAP configured')
 			end
+		end
 		end)
 		.catch(get_error_handler('dap configuration failed'))
 		.run()
