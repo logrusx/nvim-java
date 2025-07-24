@@ -59,9 +59,10 @@ end
 ---@return table
 function M.get_pkg_list(config)
 	local deps = List:new({
-		{ name = 'jdtls', version = config.jdtls.version },
-		{ name = 'lombok-nightly', version = config.lombok.version },
-		{ name = 'java-test', version = config.java_test.version },
+		{ name = 'jdtls',
+			version = config.jdtls.version },
+		{ name = 'java-test',
+			version = config.java_test.version },
 		{
 			name = 'java-debug-adapter',
 			version = config.java_debug_adapter.version,
@@ -74,7 +75,7 @@ function M.get_pkg_list(config)
 
 	if config.spring_boot_tools.enable then
 		deps:push({
-			name = 'spring-boot-tools',
+			name = 'vscode-spring-boot-tools',
 			version = config.spring_boot_tools.version,
 		})
 	end

@@ -27,7 +27,7 @@ function M.setup(config)
 		end
 
 		if config.spring_boot_tools.enable then
-			table.insert(jdtls_plugins, 'spring-boot-tools')
+			table.insert(jdtls_plugins, 'vscode-spring-boot-tools')
 		end
 
 		local default_config = server.get_config({
@@ -38,7 +38,7 @@ function M.setup(config)
 
 		if config.spring_boot_tools.enable then
 			require('spring_boot').setup({
-				ls_path = mason_util.get_pkg_path('spring-boot-tools')
+				ls_path = mason_util.get_pkg_path('vscode-spring-boot-tools')
 					.. '/extension/language-server',
 			})
 
