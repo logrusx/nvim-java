@@ -1,3 +1,31 @@
+This is an attempt to move nvim-java to Mason 2.0 and also migrate to the official Mason repository.
+
+To use this fork you also need to use [this](https://github.com/logrusx/nvim-java-core) nvim-java-core fork.
+
+Best sync both repos locally and have something like this in your config (given that you use Lazy.nvim) along your regula nvim-java configuration:
+
+```lua
+return {
+  dir='/home/user/git/nvim-java'
+}
+```
+
+and
+
+```lua
+return {
+  dir='/home/user/git/nvim-java-core'
+}
+```
+
+The above lines only force the local plugin use, you can still keep your original nvim-java configuration intact.
+
+For plugin managers other than Lazy.nvim you need to figure it out on your own, but remember to force nvim-java use nvim-java-core from this profile.
+
+Note the main branch is identical to the original nvim-java plugin. To use the new changes you need to checkout the relevant branch. It's expected `migrate-to-official-mason-repo` to build on top of `mason-2.0-migration`
+
+Unless you want to tinker with the source code, regular use of those plugins is pointless.
+
 # :coffee: nvim-java
 
 ![Spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
