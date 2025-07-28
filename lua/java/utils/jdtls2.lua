@@ -8,7 +8,7 @@ local function get_jdtls()
 	if vim.lsp.get_clients then
 		clients = vim.lsp.get_clients({ name = 'jdtls' })
 	else
-		clients = vim.lsp.get_active_clients({ name = 'jdtls' })
+		clients = vim.lsp.get_clients({ name = 'jdtls' })
 	end
 
 	if #clients == 0 then
