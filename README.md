@@ -1,3 +1,17 @@
+## New Features
+- use the latest version from Mason registry available
+
+Pass * for version of the desired tool to setup:
+
+```lua
+require("java").setup{
+    jdtls = {
+        version="*"
+    }
+}
+```
+
+
 This is an attempt to move nvim-java to Mason 2.0 and also migrate to the official Mason repository.
 
 To use this fork you also need to use [this](https://github.com/logrusx/nvim-java-core) nvim-java-core fork.

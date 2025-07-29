@@ -13,6 +13,8 @@ function M.is_available(package_name, package_version)
 		return false
 	end
 
+	if package_version == "*" then return true end
+
 	local installed_version = pkg:get_installed_version()
 
 	return installed_version == package_version
@@ -25,6 +27,8 @@ function M.is_installed(package_name, package_version)
 	if not found or not pkg:is_installed() then
 		return false
 	end
+
+	if package_version == "*" then return true end
 
 	local installed_version = pkg:get_installed_version()
 
@@ -55,6 +59,8 @@ function M.install_pkgs(packages)
 	for _, dep in ipairs(packages) do
 		if not M.is_installed(dep.name, dep.version) then
 			local pkg = mason_reg.get_package(dep.name)
+
+			if dep.version == "*" then dep.version = pkg:get_latest_version() end
 
 			-- install errors if installation is already running in Mason 2.0
 			if not pkg:is_installing() then
