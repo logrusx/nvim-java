@@ -1,3 +1,10 @@
+# starter project available
+[Starter](https://github.com/logrusx/starter-kickstart) project is now available to test the latest changes.
+
+If you customize it or use it as a reference, pay particular attention to the mason 2.0 commit to avoid mason-lspconfig setting up jdtls before nvim-java can make its settings.
+
+---
+
 This is an attempt to move nvim-java to Mason 2.0 and also migrate to the official Mason repository.
 
 To use this fork you also need to use [this](https://github.com/logrusx/nvim-java-core) nvim-java-core fork.
@@ -25,6 +32,8 @@ For plugin managers other than Lazy.nvim you need to figure it out on your own, 
 Note the main branch is identical to the original nvim-java plugin. To use the new changes you need to checkout the relevant branch. It's expected `migrate-to-official-mason-repo` to build on top of `mason-2.0-migration`
 
 Unless you want to tinker with the source code, regular use of those plugins is pointless.
+
+---
 
 # :coffee: nvim-java
 
