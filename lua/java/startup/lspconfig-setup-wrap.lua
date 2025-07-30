@@ -33,7 +33,6 @@ function M.setup(config)
 		local default_config = server.get_config({
 			root_markers = config.root_markers,
 			jdtls_plugins = jdtls_plugins,
-			use_mason_jdk = config.jdk.auto_install,
 		})
 
 		if config.spring_boot_tools.enable then
