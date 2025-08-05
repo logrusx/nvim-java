@@ -1,4 +1,4 @@
-This for includes the features to use the official Mason registry as well as the latest versions available.
+This fork includes the features to use the official Mason registry as well as the latest versions available.
 
 To use this fork with lazy.nvim:
 
