@@ -1,3 +1,52 @@
+This for includes the features to use the official Mason registry as well as the latest versions available.
+
+To use this fork with lazy.nvim:
+
+```lua
+return {
+    logrusx/nvim-java,
+    branch = "use-latest-versions-available-in-mason-registry"
+    dependencies = {
+        {
+            logrusx/nvim-java-core,
+            branch = "migrate-to-official-mason-repo",
+        },
+    },
+}
+```
+
+Then put the following somewhere before jdtls setup is called. This also means before mason-lspconfig has enabled jdtls:
+
+```lua
+require("java").setup({
+    jdtls = {
+        -- * means the latest version available
+        version = '*' -- or 'v1.55.1' for example, if you want to use it.
+    },
+
+    -- load java test plugins
+    java_test = {
+        -- enable = false, if you don't want it.
+        version = '*'
+    },
+
+    -- load java debugger plugins
+    java_debug_adapter = {
+        -- enable = false, if you don't want it.
+        version = '*'
+    },
+
+    spring_boot_tools = {
+        -- enable = false, if you don't want it.
+        version = '*'
+    },
+
+})
+```
+
+See the [starter project](https://github.com/logrusx/starter-kickstart) for reference.
+
+
 # :coffee: nvim-java
 
 ![Spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
