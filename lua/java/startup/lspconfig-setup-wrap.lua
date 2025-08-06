@@ -38,7 +38,7 @@ function M.setup(config)
 
 		if config.spring_boot_tools.enable then
 			require('spring_boot').setup({
-				ls_path = vim.fn.glob(mason_util.get_pkg_path('vscode-spring-boot-tools')
+				ls_path = vim.fn.glob(mason_util.get_pkg_path('spring-boot-tools')
 					.. '/extension/language-server/spring-boot-language-server-*.jar'),
 			})
 
