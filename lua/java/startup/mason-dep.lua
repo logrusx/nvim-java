@@ -14,15 +14,6 @@ local M = {}
 ---Install mason package dependencies for nvim-java
 ---@param config java.Config
 function M.install(config)
-	local mason_default_config = require('mason.settings').current
-
-	local registries = list_util
-		:new(config.mason.registries)
-		:concat(mason_default_config.registries)
-
-	require('mason').setup({
-		registries = registries,
-	})
 	local packages = M.get_pkg_list(config)
 	local is_outdated = mason_util.is_outdated(packages)
 
@@ -47,7 +38,7 @@ function M.refresh_and_install(packages)
 		lazy.close_lazy_if_opened()
 
 		mason_ui.open()
-		notify.warn('Please close and re-open after dependecies are installed')
+		notify.warn('Please close and re-open after dependencies are installed')
 	end)
 
 	mason_util.refresh_registry()
