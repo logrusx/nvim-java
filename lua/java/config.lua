@@ -21,24 +21,24 @@ local config = {
 	},
 
 	jdtls = {
-		version = 'v1.43.0',
+		version = '*',
 	},
 
 	-- load java test plugins
 	java_test = {
 		enable = true,
-		version = '0.40.1',
+		version = '*',
 	},
 
 	-- load java debugger plugins
 	java_debug_adapter = {
 		enable = true,
-		version = '0.58.1',
+		version = '*',
 	},
 
 	spring_boot_tools = {
 		enable = true,
-		version = '1.55.1',
+		version = '*',
 	},
 
 	notifications = {
